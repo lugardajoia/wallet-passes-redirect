@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open in Safari</title>
+    <title>Add to Wallet</title>
 </head>
 <body>
-    <h2>Tap the button below to open in Safari:</h2>
-    <button onclick="openInSafari()">Open in Safari</button>
-
-    <script>
-        function openInSafari() {
-            window.location.href = "safari://https://dl.dropboxusercontent.com/scl/fi/5rffoiv2z0vphsb85bzgt/voucher-test.pkpass?rlkey=nacuiu4n45z69xsu5b977fkkk&e=2";
-        }
-    </script>
+    <h2>Tap the button below to add your voucher to Apple Wallet:</h2>
+    <a href="https://yourserver.com/voucher.pkpass">
+        <img src="https://developer.apple.com/apple-pay/images/add-to-apple-wallet.svg" alt="Add to Apple Wallet" width="200">
+    </a>
 </body>
 </html>
