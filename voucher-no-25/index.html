@@ -4,6 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to Apple Wallet</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        #safariWarning {
+            display: none;
+            color: #d9534f;
+            background: #f8d7da;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .wallet-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #000;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .wallet-button:hover {
+            background-color: #333;
+        }
+
+        .wallet-button img {
+            width: 180px;
+        }
+
+        .link {
+            display: block;
+            margin-top: 15px;
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
     <script>
         function openInSafari() {
             window.location.href = "https://lugardajoia.github.io/wallet-passes-redirect/voucher-no-25/voucher-test.pkpass";
@@ -21,10 +95,20 @@
     </script>
 </head>
 <body onload="detectBrowser()">
-    <h2>Your voucher is ready!</h2>
-    <p id="safariWarning" style="display:none; color: red;">
-        ⚠️ Please open this page in Safari to add the pass to Apple Wallet.
-    </p>
-    <button onclick="openInSafari()">Open in Safari</button>
+    <div class="container">
+        <h2>Your Voucher is Ready! 🎟</h2>
+        
+        <p>Tap the button below to add it to Apple Wallet.</p>
+
+        <div id="safariWarning">
+            ⚠️ Please open this page in Safari to add the pass to Apple Wallet.
+        </div>
+
+        <button class="wallet-button" onclick="openInSafari()">Open in Safari</button>
+        
+        <a class="link" href="https://lugardajoia.github.io/wallet-passes-redirect/voucher-no-25/voucher-test.pkpass">
+            Or click here if the button does not work.
+        </a>
+    </div>
 </body>
 </html>
